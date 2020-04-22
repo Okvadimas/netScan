@@ -1,4 +1,4 @@
-def netscan():
+def netScan():
     import os
     import platform
     from datetime import datetime
@@ -6,6 +6,7 @@ def netscan():
     import socket
 
     try:
+        print("### Network Scanner ###")
         address = input("Enter the Network Address: ")
         split_ip = address.split(".")
         titik = "."
@@ -56,7 +57,7 @@ def netscan():
         t2 = datetime.now()
         total = t2 - t1
         print("-" * 50)
-        print(f"Jumlah Host Connect di Jaringan: {jumlah_host}")
+        print(f"Host on this network: {jumlah_host}")
         print("-" * 50)
         print("Scanning completed in: ", total)
 
@@ -65,3 +66,6 @@ def netscan():
 
     except ValueError:
         print("\nError Value Input")
+
+
+netScan()
